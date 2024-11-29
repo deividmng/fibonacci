@@ -1,0 +1,37 @@
+fibs(n)
+This function generates the first n numbers of the Fibonacci sequence using an iterative approach:
+
+It first checks if n is a valid input (a non-negative integer).
+If n is 0, it returns an empty array.
+If n is 1, it returns an array with the first Fibonacci number, which is [0].
+For n >= 2, it initializes the Fibonacci sequence with [0, 1]. Then, it uses a loop to calculate each subsequent number by adding the previous two numbers together and pushing the result into the result array.
+Finally, the function returns the complete Fibonacci sequence.
+fibsRec(n)
+This function generates the Fibonacci sequence recursively:
+
+It first logs the message "This was printed recursively" each time the function is called.
+If n <= 0, it returns an empty array.
+If n is 1, it returns [0] as the first Fibonacci number.
+If n is 2, it returns [0, 1] (the first two numbers).
+For n > 2, it recursively calls fibsRec(n - 1) to generate the Fibonacci sequence up to n-1. It then adds the next Fibonacci number (the sum of the last two numbers in the sequence) to the sequence and returns it.
+mergeSort(arr)
+This function sorts an array using the Merge Sort algorithm, which follows the "divide and conquer" approach:
+
+If the array has 1 or fewer elements (base case), it is already sorted, and the function returns the array.
+Otherwise, it divides the array into two halves (left and right).
+It recursively calls mergeSort on both halves to sort them.
+After both halves are sorted, it calls the merge function to combine the two sorted halves into a single sorted array.
+merge(left, right)
+This helper function merges two sorted arrays (left and right) into a single sorted array:
+
+It initializes an empty array sortedArray.
+It compares the first element of left and right. The smaller element is added to sortedArray.
+It repeats this process until one of the arrays is empty.
+Once one array is empty, the remaining elements of the other array are concatenated to sortedArray, as they are already sorted.
+Example Output:
+fibs(8) prints [0, 1, 1, 2, 3, 5, 8, 13], the first 8 Fibonacci numbers.
+fibsRec(8) also prints [0, 1, 1, 2, 3, 5, 8, 13] after recursively generating the sequence.
+mergeSort([3, 2, 1, 13, 8, 5, 0, 1]) sorts the array and prints [0, 1, 1, 2, 3, 5, 8, 13].
+mergeSort([105, 79, 100, 110]) sorts the array and prints [79, 100, 105, 110].
+Error Handling
+The last fibs function includes error handling. If the input n is not a valid non-negative integer, it throws an error with the message 'Input must be a non-negative integer'.
